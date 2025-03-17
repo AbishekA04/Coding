@@ -14,7 +14,9 @@ public class HappyNum {
     sc.close();
 }
 public static boolean isHappy(int n){
-    while(n!=1 && n!=4){
+    while(n!=1 && n!=4)              //The cycle always includes 4, so if a number reaches 4, it will remain in the cycle forever.
+
+    {
         n = happy(n);
     }
     return n ==1;
