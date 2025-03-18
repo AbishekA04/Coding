@@ -11,7 +11,7 @@ public class java15 {
             arr[i] = sc.nextInt();
         }
         int f = arr[0];
-        int s = Integer.MIN_VALUE;
+        int s = Integer.MIN_VALUE;    //least negative integer -2,147,483,648
         for(int i = 1;i<num;i++){
             if(arr[i]>f){
                 s = f;
