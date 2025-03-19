@@ -1,0 +1,40 @@
+import java.util.*;
+public class Sbi extends Bank{
+    double r;
+    Sbi(double p,double n,double r){
+        super(p,n);
+        this.r =r;
+    }
+    void displaySbi(){
+         double ir = (p*n*r)/100;
+         System.out.println("The Interest Rate:"+ir);
+    }
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the principle value:");
+        double p = sc.nextDouble();
+        System.out.println("Enter the Years:");
+        double n = sc.nextDouble();
+        System.out.println("Enter the Rate of Interest:");
+        double r = sc.nextDouble();
+        Sbi s1 = new Sbi(p,n,r);
+        Sbi s2 = new Sbi(p,n,8.00);
+        s1.displayBank();
+        s1.displaySbi();
+        s2.displayBank();
+        s2.displaySbi();
+        
+    }
+}
+public class Bank{
+    double p,n;
+    Bank(double p,double n){
+        this.p = p;
+        this.n = n;
+    }
+    void displayBank(){
+        System.out.println("The principle value(P):"+p);
+        System.out.println("No of Years(N):"+n);
+        
+    }
+}
